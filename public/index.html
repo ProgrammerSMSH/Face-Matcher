@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceMatcher - Professional Face Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Face API (CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">Face<span class="highlight">Matcher</span></div>
+            <nav class="nav">
+                <a href="#" class="active">Live Match</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="camera-container">
+                <div class="camera-wrapper">
+                    <video id="video" width="720" height="560" autoplay muted></video>
+                    <canvas id="canvas"></canvas>
+                    <div class="scan-line"></div>
+                </div>
+                <div class="camera-overlay">
+                    <p class="status-text" id="status">Initializing AI Models...</p>
+                </div>
+            </div>
+
+            <div class="controls-panel">
+                <div class="control-group">
+                    <h3>Detection Mode</h3>
+                    <div class="toggle-buttons">
+                        <button class="btn active" data-mode="detection">Face Detection</button>
+                        <button class="btn" data-mode="landmarks">Landmarks</button>
+                        <button class="btn" data-mode="expressions">Expressions</button>
+                    </div>
+                </div>
+                
+                <div class="info-panel glass-panel">
+                    <h3>Live Analysis</h3>
+                    <div class="stat-row">
+                        <span>Faces Detected:</span>
+                        <span id="face-count" class="highlight-text">0</span>
+                    </div>
+                    <div class="stat-row">
+                         <span>Prominent Expression:</span>
+                         <span id="expression-stat" class="highlight-text">-</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 FaceMatcher with Shakib Hossain. Powered by TensorFlow.js</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "facematcher",
+  "version": "1.0.0",
+  "description": "Professional Face Recognition App",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "face-api",
+    "nodejs",
+    "face-recognition"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
